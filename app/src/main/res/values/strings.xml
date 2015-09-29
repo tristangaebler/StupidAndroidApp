@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StupidAndroidApp</string>
+
+    <string name="colorChange">My app to change colors!!!</string>
+    <string name="action_settings">Settings</string>
+</resources>
+
