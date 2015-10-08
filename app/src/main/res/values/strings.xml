@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">StupidAndroidApp</string>
-    <string name="helloWorld">Hell Worlds</string>
+
     <string name="colorChange">My app to change colors!!!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_jumping">Jumping Activity</string>
-    <string name="swapScreenButton">Change the screen!</string>
-    <string name="otherScreen">The other Sceen</string>
 </resources>
 
