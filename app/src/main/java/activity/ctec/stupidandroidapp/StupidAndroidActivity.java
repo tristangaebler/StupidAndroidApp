@@ -1,5 +1,6 @@
 package activity.ctec.stupidandroidapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,6 +18,7 @@ public class StupidAndroidActivity extends AppCompatActivity {
     private Button colorChangeButton;
     private TextView basicText;
     private RelativeLayout background;
+    private Button swapButton;
 
     //Protected means can only be seen inside the package
     @Override
@@ -28,7 +30,7 @@ public class StupidAndroidActivity extends AppCompatActivity {
         background = (RelativeLayout) findViewById(R.id.BackgroundLayout);
         basicText = (TextView) findViewById(R.id.AwesomeText);
         colorChangeButton = (Button) findViewById(R.id.AwesomeButton);
-
+        swapButton = (Button) findViewById(R.id.swapScreenButton);
         //Helper method - Most of the time private
         setUpListeners();
     }
@@ -92,6 +94,13 @@ public class StupidAndroidActivity extends AppCompatActivity {
                 //This is where the magic happens
                 changeBackgroundColor();
                 changeVisibilty();
+            }
+        });
+
+        swapButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View buttonView) {
+                Intent changeScreen = new Intent(buttonView.getContext(), SecondScreen.class);
+                startActivityForResult(changeScreen, 0);
             }
         });
     }

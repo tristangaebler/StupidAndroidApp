@@ -19,43 +19,16 @@
         android:text="@string/colorChange"
         android:id="@+id/AwesomeButton"
         android:layout_below="@+id/AwesomeText"
-        android:layout_alignLeft="@+id/rate"
-        android:layout_alignStart="@+id/rate"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Other Awesome Button"
-        android:id="@+id/OtherAwesomeButton"
-        android:layout_below="@+id/AwesomeButton"
-        android:layout_toRightOf="@+id/AwesomeText"
-        android:layout_toEndOf="@+id/AwesomeText"
-        android:layout_marginTop="37dp" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click me"
-        android:id="@+id/radioButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/rate"
+        android:text="@string/swapScreentText"
+        android:id="@+id/swapScreenButton"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Rate My App"
-        android:id="@+id/textView2"
-        android:layout_marginBottom="50dp"
-        android:layout_above="@+id/rate"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="66dp" />
 
 </RelativeLayout>
