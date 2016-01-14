@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
+import android.content.Intent;
 
 public class SecondScreen extends AppCompatActivity {
 
@@ -47,7 +48,10 @@ public class SecondScreen extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View buttonView) {
-
+                Intent returnIntent = new Intent();
+                setResult(RESULT_OK, returnIntent);
+                //Turns of activity
+                finish();
             }
         });
     }
