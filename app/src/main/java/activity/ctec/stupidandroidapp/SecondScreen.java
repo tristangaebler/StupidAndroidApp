@@ -71,8 +71,14 @@ public class SecondScreen extends AppCompatActivity {
                 Intent returnIntent = new Intent();
                 setResult(RESULT_OK, returnIntent);
                 //Turns of activity
-                changeBackgroundColor();
                 finish();
+            }
+        });
+
+        colorChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View buttonView) {
+                changeBackgroundColor();
             }
         });
     }
