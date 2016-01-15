@@ -7,10 +7,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 import android.content.Intent;
+import android.graphics.Color;
 
 public class SecondScreen extends AppCompatActivity {
 
     private Button homeButton;
+    private Button colorChange;
+
+    private RelativeLayout background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,9 @@ public class SecondScreen extends AppCompatActivity {
         setContentView(R.layout.activity_second_screen);
 
         homeButton = (Button) findViewById(R.id.returnHomeButton);
+        colorChange = (Button) findViewById(R.id.changeColors);
+
+        background = (RelativeLayout) findViewById(R.id.secondBackground);
         setUpListeners();
     }
 
@@ -43,6 +50,19 @@ public class SecondScreen extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void changeBackgroundColor() {
+        int red;
+        int blue;
+        int green;
+
+        //Generate random colors
+        red = (int) (Math.random() * 256);
+        blue = (int) (Math.random() * 256);
+        green = (int) (Math.random() * 256);
+
+        background.setBackgroundColor(Color.rgb(red, green, blue));
+    }
+
     private void setUpListeners() {
 
         homeButton.setOnClickListener(new View.OnClickListener() {
@@ -51,8 +71,26 @@ public class SecondScreen extends AppCompatActivity {
                 Intent returnIntent = new Intent();
                 setResult(RESULT_OK, returnIntent);
                 //Turns of activity
+                changeBackgroundColor();
                 finish();
             }
         });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
